@@ -183,10 +183,15 @@
   width: 83%;
   top: 62px;
   margin-bottom: 30px;
+  @media (max-width: 600px) {
+  top: 43px;
+  width: 75%;
+
+  }
 }
 
 .dropdown-item {
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
   background: white;
 }
