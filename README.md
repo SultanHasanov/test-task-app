@@ -1,8 +1,9 @@
-# React + Vite
+# Job Board - Биржа вакансий и резюме
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Job Board** — веб-приложение для поиска вакансий и резюме. Это приложение предоставляет функционал для поиска и отображения вакансий и резюме с возможностью фильтрации по категориям и поиску по ключевым словам.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Технологии
+- **React.js** — для создания пользовательского интерфейса
+- **React Icons** — для использования иконок
+- **Lucide React** — для иконки стрелки в кнопке
+- **SCSS** — для стилизации компонентов
