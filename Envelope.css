@@ -1,0 +1,156 @@
+#envelope {
+  position: relative;
+  width: 280px;
+  height: 180px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 150px;
+  background-color: #00334c;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.front {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 3;
+}
+
+.flap {
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-bottom: 82px solid transparent;
+  border-top: 98px solid #00334c;
+  transform-origin: top;
+  pointer-events: none;
+}
+
+.pocket {
+  border-left: 140px solid #0077B2;
+  border-right: 140px solid #0077B2;
+  border-bottom: 90px solid #006da3;
+  border-top: 90px solid transparent;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  transition: opacity 1s ease 1.5s;
+}
+
+.letter {
+  position: relative;
+  background-color: #fff;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90%;
+  top: 5%;
+  border-radius: 6px;
+  box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
+}
+
+
+
+.words {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 14%;
+  background-color: #EEEFF0;
+}
+
+.words.line1 {
+  top: 15%;
+  width: 20%;
+  height: 7%;
+}
+
+.words.line2 {
+  top: 30%;
+  text-align: center;
+}
+
+.words.line3 {
+  top: 50%;
+  text-align: center;
+
+}
+
+.words.line4 {
+  top: 70%;
+  text-align: center;
+
+}
+
+.open .flap {
+  transform: rotateX(180deg);
+  transition: transform 2s ease, z-index 2s;
+  z-index: 1;
+}
+
+.close .flap {
+  transform: rotateX(0deg);
+  transition: transform 1s 1s ease, z-index 1s;
+  z-index: 5;
+}
+
+.close .letter {
+  transform: translateY(0px);
+  transition: transform 0.4s ease, z-index 1s;
+  z-index: 1;
+}
+
+.open .letter {
+  transform: translateY(-60px);
+  transition: transform 1s 1s ease, z-index 0.6s;
+  z-index: 2;
+}
+
+body {
+  background-color: #a8e2ff;
+}
+
+.envlope-wrapper {
+  height: 380px;
+}
+
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  bottom: 400px;
+  font-size: 15px;
+
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #0077B2;
+}
+
+
+.open {
+  background-color: transparent !important;
+  transition: background-color 5s ease;
+  box-shadow: none !important;
+} */
+
+ .close {
+  background-color: #00334c;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+ }
+
+.flap,
+.pocket {
+  transition: opacity 3s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 2s ease;
+
+}
