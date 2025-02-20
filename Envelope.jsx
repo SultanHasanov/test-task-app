@@ -5,9 +5,6 @@ import "./Envelope.css";
 const Envelope = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
-  const [openBtn, setOpenBtn] = useState(true);
-
-
 
   const openEnvelope = () => {
     setIsOpen(true);
@@ -16,12 +13,8 @@ const Envelope = () => {
     setInterval(() => {
       setFadeOut(true);
     }, 3000);
-   
-    setOpenBtn(false);
-    
   };
 
-  
   const triggerConfetti = () => {
     confetti({
       particleCount: 900,
@@ -45,12 +38,11 @@ const Envelope = () => {
           <div className="words line4">Lorem, ipsum.</div>
         </div>
       </div>
-      {openBtn && (
-        <div className="reset">
-        <button className="btn" onClick={openEnvelope}>Открыть</button>
+      <div className={`reset ${fadeOut ? "hidden" : ""}`}>
+        <button className="btn" onClick={openEnvelope}>
+          Открыть
+        </button>
       </div>
-      )}
-      
     </div>
   );
 };

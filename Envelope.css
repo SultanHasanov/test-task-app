@@ -1,14 +1,19 @@
+
 #envelope {
   position: relative;
   width: 280px;
   height: 180px;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  margin-left: auto;
+  /* margin-left: auto;
   margin-right: auto;
-  top: 150px;
+  top: 150px; */
   background-color: #00334c;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .front {
@@ -107,25 +112,31 @@
 }
 
 body {
+  height: 100vh;
+  margin: 0;
   background-color: #a8e2ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .envlope-wrapper {
-  height: 380px;
+  /* height: 800px; */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .btn {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   padding: 20px;
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  bottom: 400px;
   font-size: 15px;
-
+margin-top: 30px;
   cursor: pointer;
   border: none;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -154,3 +165,16 @@ body {
   transition: opacity 2s ease;
 
 }
+
+.reset {
+  opacity: 1; /* Кнопка видимая */
+  transition: opacity 0.5s ease, visibility 0s 0.5s; /* Плавное исчезновение */
+  visibility: visible; /* Кнопка видима */
+}
+
+.reset.hidden {
+  opacity: 0; /* Прозрачная кнопка */
+  visibility: hidden; /* Кнопка исчезает */
+  pointer-events: none; /* Отключаем события на кнопке */
+}
+

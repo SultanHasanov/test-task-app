@@ -3,9 +3,7 @@ import Envelope from "../Envelope.jsx";
 
 function App() {
   return (
-    <div>
       <Envelope />
-    </div>
   );
 }
 
